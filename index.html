@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Dio Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="hdr">
+      <div class="wrap nav">
+        <a class="logo" href="#top">Dio<i></i></a>
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-expanded="false"
+          aria-controls="links"
+        >
+          Menu
+        </button>
+        <nav class="links" id="links" aria-label="Main">
+          <a href="#menu">Menu</a><a href="#about">About</a
+          ><a href="#reviews">Reviews</a
+          ><a class="btn" href="#reserve">Book a table</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <div class="hero">
+        <div class="wrap">
+          <div>
+            <span class="status"
+              ><span class="dot" id="dot"></span
+              ><span id="statusText">Checking hours…</span></span
+            >
+            <h1>Good food, <em>made fresh</em> for every table.</h1>
+            <p>
+              Dio Restaurant serves honest, flavourful dishes cooked to order.
+              Come for lunch, stay for dinner.
+            </p>
+            <div class="row">
+              <a class="btn" href="#reserve">Book a table</a
+              ><a class="btn ghost" href="#menu">View menu</a>
+            </div>
+            <div class="stats">
+              <div><b>4.9</b><span>Guest rating</span></div>
+              <div><b>30+</b><span>Fresh dishes</span></div>
+              <div><b>7 days</b><span>Open weekly</span></div>
+            </div>
+          </div>
+          <div class="stage">
+            <div class="blob"></div>
+            <div class="main" id="heroImg"></div>
+            <div class="chip c2">
+              Cooked to order<small>Never pre-made</small>
+            </div>
+            <div class="chip c1">
+              Family friendly<small>Groups welcome</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="menu">
+        <div class="wrap">
+          <h2>Our menu</h2>
+          <p class="lead">
+            Everything is prepared fresh each day. Ask your server about today’s
+            specials.
+          </p>
+          <div
+            class="tabs"
+            id="tabs"
+            role="group"
+            aria-label="Menu categories"
+          ></div>
+          <div class="grid" id="items"></div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="wrap split">
+          <div class="collage" id="collage"></div>
+          <div>
+            <h2>Simple cooking, done properly</h2>
+            <p class="lead" style="margin-bottom: 0">
+              Dio started with one idea: serve the food we would be proud to put
+              in front of our own family. Replace this text with your real
+              story.
+            </p>
+            <ul class="ticks">
+              <li>Ingredients bought and prepared the same day</li>
+              <li>Every plate cooked when you order it</li>
+              <li>Comfortable seating for families and groups</li>
+              <li>Friendly, fast service</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews">
+        <div class="wrap">
+          <h2>What guests say</h2>
+          <p class="lead">
+            Sample reviews. Replace them with real ones from your customers.
+          </p>
+          <div class="quotes">
+            <div class="q">
+              <div class="s">★★★★★</div>
+              <p>
+                The grilled chicken was perfect and the service was quick. We
+                will be back this week.
+              </p>
+              <b>Amina K.</b>
+            </div>
+            <div class="q">
+              <div class="s">★★★★★</div>
+              <p>
+                Great place for a family lunch. Clean, calm and the juices are
+                fresh.
+              </p>
+              <b>Mohamed A.</b>
+            </div>
+            <div class="q">
+              <div class="s">★★★★★</div>
+              <p>
+                We booked a table for ten and everything was ready when we
+                arrived.
+              </p>
+              <b>Hodan S.</b>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reserve" id="reserve">
+        <div class="wrap split" style="align-items: start">
+          <div class="info">
+            <div>
+              <h2>Book a table</h2>
+              <p class="lead">
+                Send your request and we will confirm on WhatsApp or by phone.
+              </p>
+            </div>
+            <div>
+              <h3>Opening hours</h3>
+              <p>Saturday to Thursday: 8:00 to 23:00</p>
+              <p>Friday: 14:00 to 23:00</p>
+            </div>
+            <div>
+              <h3>Find us</h3>
+              <p>Your street address, your city</p>
+            </div>
+            <div>
+              <h3>Contact</h3>
+              <p>+252617868692</p>
+              <p>dio@restaurent.com</p>
+            </div>
+          </div>
+          <div class="box">
+            <form id="form" novalidate>
+              <label
+                >Name<input name="name" required autocomplete="name"
+              /></label>
+              <label
+                >Phone<input
+                  name="phone"
+                  type="tel"
+                  required
+                  autocomplete="tel"
+              /></label>
+              <label>Date<input name="date" type="date" required /></label>
+              <label>Time<input name="time" type="time" required /></label>
+              <label class="full"
+                >Guests<select name="guests">
+                  <option>1</option>
+                  <option>2</option>
+                  <option selected>4</option>
+                  <option>6</option>
+                  <option>8</option>
+                  <option>10+</option>
+                </select></label
+              >
+              <p id="msg" class="full" role="alert"></p>
+              <div class="full">
+                <button class="btn" type="submit">Request reservation</button>
+              </div>
+            </form>
+            <div id="done" hidden></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <button class="fab" id="fab" type="button" aria-label="Open your order">
+      <span id="cnt">0</span>Your order
+    </button>
+    <div class="shade" id="shade"></div>
+    <aside
+      class="drawer"
+      id="drawer"
+      aria-label="Your order"
+      aria-hidden="true"
+    >
+      <div class="dh">
+        <h3 style="font-size: 1.5rem">Your order</h3>
+        <button class="x" id="close" type="button" aria-label="Close">×</button>
+      </div>
+      <div class="lines" id="lines"></div>
+      <div class="tot"><span>Total</span><span id="total">$0.00</span></div>
+      <div class="ord">
+        <input id="oname" placeholder="Your name" autocomplete="name" /><select
+          id="otype"
+          aria-label="Order type"
+        >
+          <option>Pickup</option>
+          <option>Delivery</option>
+          <option>Eat in</option></select
+        ><input id="oaddr" placeholder="Delivery address (if delivery)" /><input
+          id="onote"
+          placeholder="Note (optional)"
+        />
+      </div>
+      <p
+        id="omsg"
+        style="margin: 0 0 10px; color: #e5484d; font-weight: 600"
+        role="alert"
+      ></p>
+      <button class="btn" id="send" type="button">
+        Send order on WhatsApp
+      </button>
+    </aside>
+    <div class="toast" id="toast"></div>
+    <footer>
+      <div class="wrap">
+        <span>© <span id="year"></span> Dio Restaurant</span
+        ><span>Open daily</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
